@@ -1,0 +1,27 @@
+// ------------------------------------ //
+// #Colors
+// ------------------------------------ //
+
+$red: yellow;
+$myblue: red;
+
+$names: (
+    red,
+    myblue
+);
+$colors: (
+    $red,
+    $myblue
+);
+
+@each $name in $names {
+    $i: index($names, $name);
+
+    .bg-#{$name} {
+        background-color: nth($colors, $i);
+    }
+
+    .text-#{$name} {
+        color: nth($colors, $i);
+    }
+}
