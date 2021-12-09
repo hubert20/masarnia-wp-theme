@@ -10,7 +10,7 @@ get_header();
 <main id="main" class="" role="main">
     <div class="container">
 
-        Mainpage
+        Mainpage this
 
         <?php var_dump(get_template_directory_uri()); ?>
 
