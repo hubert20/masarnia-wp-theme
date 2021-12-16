@@ -1,1 +1,14 @@
-<h2 class="text-center my-5">Aktualności</h2>
+<section class="" style="height: 200px; background-color: black;">
+
+
+
+
+<h2 class="text-center">Aktualności 222</h2>
+
+
+
+
+
+
+</section>
+

@@ -1,5 +1,5 @@
 <!-- Top hero -->
-<section class="top-hero">
+<section class="top-hero" style="height: 300px; background-color: yellow;">
     <div id="carouselHeader" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

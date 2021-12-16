@@ -7,14 +7,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WP_Bootstrap_Starter
+ * @package masarnia-wp-theme
  */
 ?>
 
-
-<h2>TEEEEEEEEEEEEESTTTTTTTTT</h2>
+<footer class="site-footer" role="contentinfo">
+    <?php get_template_part('footer-widget'); ?>
+</footer>
 
 
 <?php wp_footer(); ?>
 </body>
+
 </html>
