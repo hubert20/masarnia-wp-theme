@@ -12,11 +12,7 @@ function wp_masarnia_scripts()
     global $ver_num;
     $ver_num = mt_rand();
     wp_enqueue_style('wp-masarnia-css', get_template_directory_uri() . '/dist/style.css', array(), $ver_num, 'all');
-
     wp_enqueue_script('jquery');
-
-    //wp_enqueue_script('js', bloginfo('template_directory') . '/dist/test.js', array(), $ver_num, true);
-
     wp_enqueue_script('my_javascript_file', get_template_directory_uri() . '/dist/main.bundle.js', array('jquery'), $ver_num);
 
 }
