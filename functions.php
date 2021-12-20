@@ -8,13 +8,12 @@ error_reporting(E_ALL);
  */
 function wp_masarnia_scripts()
 {
-    // load bootstrap & AItheme styles css
-    global $ver_num;
-    $ver_num = mt_rand();
-    wp_enqueue_style('wp-masarnia-css', get_template_directory_uri() . '/dist/style.css', array(), $ver_num, 'all');
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('my_javascript_file', get_template_directory_uri() . '/dist/main.bundle.js', array('jquery'), $ver_num);
-
+  // load bootstrap & AItheme styles css
+  global $ver_num;
+  $ver_num = mt_rand();
+  wp_enqueue_style('wp-masarnia-css', get_template_directory_uri() . '/dist/style.css', array(), $ver_num, 'all');
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('my_javascript_file', get_template_directory_uri() . '/dist/main.bundle.js', array('jquery'), $ver_num);
 }
 add_action('wp_enqueue_scripts', 'wp_masarnia_scripts');
 
@@ -45,14 +44,14 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
   function start_lvl(&$output, $depth = 0, $args = null)
   {
     $dropdown_menu_class[] = '';
-    foreach($this->current_item->classes as $class) {
-      if(in_array($class, $this->dropdown_menu_alignment_values)) {
+    foreach ($this->current_item->classes as $class) {
+      if (in_array($class, $this->dropdown_menu_alignment_values)) {
         $dropdown_menu_class[] = $class;
       }
     }
     $indent = str_repeat("\t", $depth);
     $submenu = ($depth > 0) ? ' sub-menu' : '';
-    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ",$dropdown_menu_class)) . " depth_$depth\">\n";
+    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
   }
 
   function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
@@ -87,8 +86,8 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
     $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? 'active' : '';
-    $nav_link_class = ( $depth > 0 ) ? 'dropdown-item ' : 'nav-link ';
-    $attributes .= ( $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . $active_class . '"';
+    $nav_link_class = ($depth > 0) ? 'dropdown-item ' : 'nav-link ';
+    $attributes .= ($args->walker->has_children) ? ' class="' . $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="' . $nav_link_class . $active_class . '"';
 
     $item_output = $args->before;
     $item_output .= '<a' . $attributes . '>';
@@ -102,3 +101,17 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 // register a new menu
 register_nav_menu('main-menu', 'Main menu');
 
+/*
+* Let WordPress manage the document title.
+* By adding theme support, we declare that this theme does not use a
+* hard-coded <title> tag in the document head, and expect WordPress to
+* provide it for us.
+*/
+add_theme_support('title-tag');
+
+/*
+* Enable support for Post Thumbnails on posts and pages.
+*
+* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+*/
+add_theme_support('post-thumbnails');
