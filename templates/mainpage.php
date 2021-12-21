@@ -10,7 +10,7 @@ get_header();
 <!-- Main hero -->
 <?php get_template_part('template-parts/main-hero'); ?>
 
-<!-- Main products -->
+<!-- Main products & categories -->
 <?php get_template_part('template-parts/main-products'); ?>
 
 <!-- Main news -->

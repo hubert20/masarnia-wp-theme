@@ -1,13 +1,11 @@
-<section class="" style="height: 200px; background-color: violet;">
+<?php 
+$test = get_field('test');
+?>
+
+<section class="masarnia-o-nas">
+    <div class="container">
+        <h2>O Nas</h2>
 
 
-
-
-    <h2>Main About</h2>
-
-
-
-
-
-
+    </div>
 </section>

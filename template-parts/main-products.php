@@ -1,4 +1,4 @@
-<section class="main-products" style="background-color: green; height: 400px;">
+<section class="main-products">
     <div class="container">
         <h2>Nasze produkty</h2>
         <?php
@@ -59,14 +59,13 @@
                         </div>
                     <?php endwhile; ?>
             <?php else :
-                    echo 'Brak produktów ' . $cat->name;
+                    echo 'Brak produktów w kategorii ' . $cat->name;
                 endif;
             endforeach;
             ?>
         </div>
     </div>
 </section>
-
 
 <script>
     jQuery('#products-navigation a.prod-main-list').on('click', function(e) {
