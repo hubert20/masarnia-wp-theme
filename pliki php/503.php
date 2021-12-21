@@ -17,13 +17,13 @@ get_header(); ?>
 			<div class="col-lg-6">
 				<h4 class="mb-4"><strong>Za chwilę to naprawimy.</strong></h4>
 				<p>
-					Serwis www Szlachetnej Paczki jest chwilowo niedostępny. Pracujemy nad tym, żeby jak najszybciej do Was wrócić. Dziękujemy za cierpliwość.
+					Serwis www jest chwilowo niedostępny. Pracujemy nad tym, żeby jak najszybciej do Was wrócić. Dziękujemy za cierpliwość.
 				</p>
 				<p class="mb-4">
 					A tymczasem możesz dowiedzieć się więcej o Akademii Przyszłości:
 				</p>
 
-				<a href="http://akademiaprzyszlosci.org.pl" class="btn btn-red btn-lg">Przejdź na akademiaprzyszlosci.org.pl ></a>
+				<a href="www.pl" class="btn btn-red btn-lg">Przejdź na www.pl ></a>
 			</div>
 		</div>
 	</div>
