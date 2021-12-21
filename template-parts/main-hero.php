@@ -1,5 +1,9 @@
+<?php
+$test = get_field('test');
+?>
+
 <!-- Top hero -->
-<section class="top-hero" style="height: 300px; background-color: yellow;">
+<section class="top-hero" style="background-image: url('<?php echo $test; ?>');">
     <div id="carouselHeader" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
