@@ -1,28 +1,28 @@
 <?php
-$test = get_field('test');
+$hero_cnt = get_field('hero_cnt');
+$hero_background_desktop = get_field('hero_background_desktop');
+$hero_background_mobile = get_field('hero_background_mobile');
+$hero_widget = get_field('hero_widget');
 ?>
 
 <!-- Top hero -->
-<section class="top-hero" style="background-image: url('<?php echo $test; ?>');">
-    <div id="carouselHeader" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+<section class="top-hero">
+    <?php echo $hero_cnt; ?>
+    <?php echo $hero_widget; ?>
 </section>
+
+<!-- Style hero -->
+<style>
+    .top-hero {
+        background-image: url('<?php echo $hero_background_mobile; ?>');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @media screen and (min-width: 992px) {
+        .top-hero {
+            background-image: url('<?php echo $hero_background_desktop; ?>');
+            height: 100vh;
+        }
+    }
+</style>
