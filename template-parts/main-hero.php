@@ -19,6 +19,7 @@ $hero_widget = get_field('hero_widget');
         background-position: center;
         background-repeat: no-repeat;
     }
+
     @media screen and (min-width: 992px) {
         .top-hero {
             background-image: url('<?php echo $hero_background_desktop; ?>');

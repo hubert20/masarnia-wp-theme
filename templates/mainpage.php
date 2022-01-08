@@ -5,13 +5,18 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 
+$hero_cnt = get_field('hero_cnt');
+$hero_background_desktop = get_field('hero_background_desktop');
+$hero_background_mobile = get_field('hero_background_mobile');
+$hero_widget = get_field('hero_widget');
+
 ?>
 
 <!-- Main hero -->
 <?php get_template_part('template-parts/main-hero'); ?>
 
 <!-- Main products & categories -->
-<?php get_template_part('template-parts/main-products'); ?>
+<?php get_template_part('template-parts/main-categories'); ?>
 
 <!-- Main news -->
 <?php get_template_part('template-parts/main-news'); ?>
