@@ -155,3 +155,10 @@ package.json
       "popper.js": "^1.12.9"
     }
   }
+
+  # pluginy do działania strony
+
+  1. Categories Images
+  https://pl.wordpress.org/plugins/categories-images/
+  2. Remove Category URL
+  https://pl.wordpress.org/plugins/remove-category-url/
