@@ -34,7 +34,7 @@
                                             ?>
                                             <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                                         <?php else : ?>
-                                            <img src="<?php get_bloginfo('stylesheet_directory');  ?>/images/thumbnail-default.jpg" class="img-fluid">
+                                            <img src="<?php bloginfo('template_directory'); ?>/images/produkty-masarnia-staropolska.jpg" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                                         <?php endif; ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>

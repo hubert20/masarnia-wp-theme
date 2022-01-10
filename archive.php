@@ -37,6 +37,8 @@ $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/
                                 $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
                                 ?>
                                 <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
+                            <?php else : ?>
+                                <img src="<?php bloginfo('template_directory'); ?>/images/produkty-masarnia-staropolska.jpg" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                             <?php endif; ?>
                         </figure>
                         <!-- Product title -->
@@ -44,12 +46,12 @@ $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/
                             <strong><?php the_title(); ?></strong>
                         </h3>
                         <!-- product desc slide content -->
-                        <div class="product__content slide-up-content">
+                        <div class="product__content slide-up-content p-3 p-lg-4">
                             <div class="slide-up-content__content">
-                                <h3 class="products-boxes__title my-3 my-lg-4">
+                                <h3 class="products-boxes__title mb-3 mb-lg-4">
                                     <strong><?php the_title(); ?></strong>
                                 </h3>
-                                <?php the_content(); ?>
+                                <div class="overflow-auto"><?php the_content(); ?></div>
                             </div>
                             <span class="slide-up-content__close close-content">
                                 <span class="close-button"></span>
@@ -106,5 +108,4 @@ $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/
     jQuery('.close-content').on('click', function() {
         jQuery(this).prev().parent().removeClass('active');
     });
-
 </script>

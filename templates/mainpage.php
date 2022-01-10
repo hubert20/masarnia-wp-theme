@@ -5,10 +5,13 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 
+//Hero
 $hero_cnt = get_field('hero_cnt');
 $hero_background_desktop = get_field('hero_background_desktop');
 $hero_background_mobile = get_field('hero_background_mobile');
 $hero_widget = get_field('hero_widget');
+
+//Main About us
 
 ?>
 
