@@ -18,13 +18,16 @@
                 );
                 $my_query = new WP_Query($args);
                 ?>
-                <div class="col-sm-4 col-md-3 px-2">
+                <div class="col-lg-4 col-md-6">
                     <div class="main-categories__item">
                         <figure class="main-categories__item-img">
-                            <a class="prod-list__item prod-main-list" href="<?= $cat_link; ?>" data-category-type="<?= $cat->slug; ?>" title="Produkty Masarnia-Staropolska - <?=$cat->name;?>">
+                            <a class="prod-list__item prod-main-list" href="<?= $cat_link; ?>" data-category-type="<?= $cat->slug; ?>" title="Produkty Masarnia-Staropolska - <?= $cat->name; ?>">
                                 <h3 class="text-center"><?= $cat->name; ?></h3>
-                                <?php
-                                if ($my_query->have_posts()) : ?>
+                                <?php if (function_exists('z_taxonomy_image_url')) : ?>
+                                    <img src="<?php echo z_taxonomy_image_url($cat->term_id, 'large'); ?>" class="img-fluid" alt="<?= $cat->name; ?>" style="border: 1px solid rgba(119, 71, 2, .2);">
+                                <?php endif; ?>
+                                <!-- Img in first post in category -->
+                                <?php /*if ($my_query->have_posts()) : ?>
                                     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                                         <?php if (has_post_thumbnail($post->ID)) : ?>
                                             <?php
@@ -37,7 +40,7 @@
                                             <img src="<?php bloginfo('template_directory'); ?>/images/produkty-masarnia-staropolska.jpg" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                                         <?php endif; ?>
                                     <?php endwhile; ?>
-                                <?php endif; ?>
+                                <?php endif; */ ?>
                             </a>
                         </figure>
                         <div class="main-categories__item-action">
