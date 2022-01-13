@@ -15,15 +15,11 @@ $hero_widget = get_field('hero_widget');
 <style>
     .top-hero {
         background-image: url('<?php echo $hero_background_mobile; ?>');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     @media screen and (min-width: 992px) {
         .top-hero {
             background-image: url('<?php echo $hero_background_desktop; ?>');
-            height: 100vh;
         }
     }
 </style>

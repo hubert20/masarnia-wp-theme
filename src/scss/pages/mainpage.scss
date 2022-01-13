@@ -1,0 +1,66 @@
+// Mainpage
+
+// Top Hero
+.top-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@include media-breakpoint-up(lg) {
+    .top-hero {
+        height: 100vh;
+    }
+}
+
+// Main categories section
+.main-categories {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__item {
+        border: 1px solid rgba(119, 71, 2, 0.2);
+        position: relative;
+    }
+    &__item-img {
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        display: block;
+        a {
+            display: block;
+            img {
+                transition: transform 0.3s ease-in-out;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.03);
+                }
+                &:before {
+                    background-color: rgba(0, 0, 0, .60);
+                }
+            }
+            h3 {
+                position: absolute;
+                z-index: 9;
+                top: 0;
+                left: 0;
+            }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                transition: all 0.3s ease-out 0s;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background-color: rgba(0, 0, 0, .34);
+                z-index: 2;
+            }
+        }
+    }
+    &__item-action {
+        position: absolute;
+    }
+}
