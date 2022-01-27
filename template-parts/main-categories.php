@@ -44,7 +44,7 @@
                             </a>
                         </figure>
                         <div class="main-categories__item-action">
-                            <i class="ico ico-arrow-right"></i>
+                        <i class="far fa-arrow-alt-circle-right"></i>
                         </div>
                     </div>
                 </div>
