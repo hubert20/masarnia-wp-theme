@@ -1,7 +1,7 @@
-<section class="main-products py-3 py-lg-5">
+<section class="main-categories py-3 py-lg-5" id="main-categories">
     <div class="container">
         <h2 class="text-center mb-3 mb-lg-5">Sprawdź produkty Masarnia-Staropolska</h2>
-        <div id="main-categories" class="main-categories row">
+        <div class="row">
             <?php
             $args = array('parent' => 18);
             $cats = get_categories($args);

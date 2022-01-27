@@ -10,8 +10,10 @@
   "license": "ISC",
   "description": "Strona www masarnia-staropolska",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@popperjs/core": "^2.11.0",
     "bootstrap": "^5.1.3",
+    "file-loader": "^6.2.0",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
