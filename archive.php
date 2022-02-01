@@ -14,12 +14,10 @@ $name = get_the_archive_title();
 $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/', '-', $name)));
 ?>
 
-<div class="page-header-top page-header-top-<?php echo $name_cat; ?> mb-3 mb-lg-5">
-    <div class="container">
-        <h1 class="page-header-top__title text-center">
-            <?php the_archive_title(); ?>
-        </h1>
-    </div>
+<div class="page-header-top page-header-top-<?php echo $name_cat; ?> mb-3 mb-lg-5 d-flex flex-column align-items-center justify-content-center">
+    <h1 class="page-header-top__title text-white text-center">
+        <?php the_archive_title(); ?>
+    </h1>
 </div>
 
 <main id="main" class="[- products-boxes mb-4 mb-lg-5 -]" role="main">

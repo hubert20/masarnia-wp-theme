@@ -3,15 +3,15 @@
 // ------------------------------------ //
 
 $red: yellow;
-$myblue: red;
+$brown-brand: #774702;
 
 $names: (
     red,
-    myblue
+    $brown-brand
 );
 $colors: (
     $red,
-    $myblue
+    $brown-brand
 );
 
 @each $name in $names {

@@ -1,0 +1,65 @@
+// Global
+
+// Top Menu
+
+.navbar-nav li a {
+    border-radius: 30px;
+    transition: all 0.5s ease-in;
+}
+.navbar-nav li a.active {
+    background: $brown-brand;
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+    outline: none;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar-nav {
+    .dropdown {
+        .dropdown-toggle {
+            position: relative;
+            &:after {
+                border-right: none;
+                border-left: none;
+                border-top: none;
+                content: "\f107";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                position: absolute;
+                position: absolute;
+                top: 3px;
+                @include media-breakpoint-up(xl) {
+                    top: 8px;
+                }
+                transition: 0.5s;
+            }
+        }
+        &.show {
+            .dropdown-toggle {
+                &:after {
+                    transition: 0.5s;
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}
+
+// Category top
+.page-header-top {
+    height: 430px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/wordpress/wp-content/uploads/2022/02/masarnia-staropolska-banner-scaled.jpg");
+    &__title {
+
+    }
+}

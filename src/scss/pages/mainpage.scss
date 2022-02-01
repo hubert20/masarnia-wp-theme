@@ -10,6 +10,9 @@
 @include media-breakpoint-up(lg) {
     .top-hero {
         height: 100vh;
+        &__cnt {
+            height: 100vh;
+        }
     }
 }
 
