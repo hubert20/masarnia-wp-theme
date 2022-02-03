@@ -7,7 +7,10 @@
 // @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 
 // MY VARIABLES
-@import "theme/variables";
+@import "theme/variables.scss";
+
+// TYPOGRAPHY
+@import "theme/typography.scss";
 
 // GLOBAL & THEME
 @import "theme/global.scss";
