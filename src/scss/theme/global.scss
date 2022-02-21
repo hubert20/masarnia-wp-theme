@@ -2,22 +2,45 @@
 
 // Top Menu
 
-.navbar-nav li a {
-    border-radius: 30px;
-    transition: all 0.5s ease-in;
-}
-.navbar-nav li a.active {
-    background: $brown-brand;
-    color: #fff !important;
-}
+// .navbar-nav li a {
+//     border-radius: 30px;
+//     transition: all 0.5s ease-in;
+// }
+// .navbar-nav li a.active {
+//     background: $brown-brand;
+//     color: #fff !important;
+// }
 
-.navbar-toggler {
-    border-color: #fff;
-    outline: none;
-}
+// .navbar-toggler {
+//     border-color: #fff;
+//     outline: none;
+// }
 
-.navbar-nav .dropdown-menu {
-    margin-top: 0;
+// .navbar-nav .dropdown-menu {
+//     margin-top: 0;
+// }
+
+#top-header {
+    .navbar-nav {
+        > li {
+            > a {
+                color: #fff;
+                padding: 0.5rem 0.7rem;
+                margin: 0 10px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            &.current_page_item {
+                > a {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
 .navbar-nav {
@@ -33,21 +56,54 @@
                 font-style: normal;
                 font-weight: normal;
                 position: absolute;
-                position: absolute;
                 top: 3px;
                 @include media-breakpoint-up(xl) {
                     top: 8px;
                 }
                 transition: 0.5s;
             }
-        }
-        &.show {
-            .dropdown-toggle {
+            &.show {
                 &:after {
                     transition: 0.5s;
                     transform: rotate(-180deg);
                 }
             }
+        }
+    }
+}
+
+.dropdown-menu {
+    background: #fff;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    min-width: 13rem;
+    border: none;
+    .menu-item {
+        border-bottom: 1px solid #f1f1f1;
+        &:last-child {
+            border: none;
+        }
+    }
+    .dropdown-item {
+        padding: 1rem 1rem 1rem 1.5rem;
+        font-weight: 500;
+        &:before {
+            font-family: FontAwesome;
+            content: "\f105";
+            font-style: normal;
+            font-weight: normal;
+            position: absolute;
+            left: 12px;
+            color: #c5c5c5;
+        }
+        &:hover {
+            background-color: $brown-brand;
+            color: #fff;
+        }
+        &.active {
+            background-color: $brown-brand;
+            color: #fff;
         }
     }
 }
@@ -58,10 +114,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/wordpress/wp-content/uploads/2022/02/masarnia-staropolska-banner-scaled.jpg");
+    background-image: url("/wp-content/uploads/2022/02/kategorie-masarnia-staropolska.jpg");
     &__title {
     }
     &.page-header-top-kielbasy {
-        background-image: url("/wordpress/wp-content/uploads/2022/02/masarnia-staropolska-banner-scaled.jpg");
+        background-image: url("/wp-content/uploads/2022/02/kategorie-masarnia-staropolska.jpg");
     }
 }
