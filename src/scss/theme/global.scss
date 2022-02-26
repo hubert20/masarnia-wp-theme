@@ -1,41 +1,32 @@
-// Global
-
 // Top Menu
+#top-header {
+    margin-top: 20px;
+}
 
-// .navbar-nav li a {
-//     border-radius: 30px;
-//     transition: all 0.5s ease-in;
-// }
-// .navbar-nav li a.active {
-//     background: $brown-brand;
-//     color: #fff !important;
-// }
-
-// .navbar-toggler {
-//     border-color: #fff;
-//     outline: none;
-// }
-
-// .navbar-nav .dropdown-menu {
-//     margin-top: 0;
-// }
+.navbar-brand {
+    &.top-logo {
+        img {
+            width: 130px;
+        }
+    }
+}
 
 #top-header {
     .navbar-nav {
         > li {
             > a {
-                color: #fff;
+                color: #1e2125;
                 padding: 0.5rem 0.7rem;
                 margin: 0 10px;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 font-weight: 600;
                 &:hover {
-                    color: #fff;
+                    color: $brown-brand;
                 }
             }
             &.current_page_item {
                 > a {
-                    color: #fff;
+                    color: #1e2125;
                     text-decoration: underline;
                 }
             }
@@ -120,4 +111,13 @@
     &.page-header-top-kielbasy {
         background-image: url("/wp-content/uploads/2022/02/kategorie-masarnia-staropolska.jpg");
     }
+}
+
+// Footer-widget
+.footer-widgets {
+    background-color: #131212;
+}
+
+.site-footer {
+    background-color: #000000;
 }

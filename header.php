@@ -22,11 +22,16 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="top-header" class="" role="banner">
+    <div class="top-static">
         <div class="container">
-            <nav class="navbar fixed-top navbar-expand-md navbar-theme">
+
+        </div>
+    </div>
+    <header id="top-header" class="fixed-top" role="banner">
+        <div class="container bg-white">
+            <nav class="navbar navbar-expand-md navbar-theme">
                 <?php if (get_theme_mod('masarnia_wp_theme_logo')) : ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand d-inline-block d-md-none align-items-center">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand align-items-center top-logo">
                         <img src="<?php echo esc_url(get_theme_mod('masarnia_wp_theme_logo')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                     </a>
                 <?php endif; ?>

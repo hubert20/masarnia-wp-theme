@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
 
 //Poppins
 $poppins-font-family: "Poppins", sans-serif;
@@ -11,9 +12,16 @@ $poppins-font-family: "Poppins", sans-serif;
 // Playfair
 $playfair-font-family: "Playfair Display", serif;
 
+// Mea Culpa
+$mea-culpa-font-family: 'Mea Culpa', cursive;
+
 .playfair-font {
     font-family: $playfair-font-family !important;
 }
+
+.mea-culpa-font {
+  font-family: $mea-culpa-font-family!important;
+} 
 
 html,
 body {

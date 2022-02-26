@@ -1,6 +1,6 @@
 <section class="main-categories py-3 py-lg-5" id="main-categories">
     <div class="container">
-        <h2 class="text-center mb-3 mb-lg-5">Sprawdź produkty Masarnia-Staropolska</h2>
+        <h2 class="text-center mea-culpa-font playfair-title-2 text-brown-brand mb-3 mb-lg-5">Sprawdź produkty Masarnia-Staropolska</h2>
         <div class="row">
             <?php
             $args = array('parent' => 18);
@@ -22,7 +22,7 @@
                     <div class="main-categories__item mb-3 mb-lg-4">
                         <figure class="main-categories__item-img m-0">
                             <a class="text-white" href="<?= $cat_link; ?>" data-category-type="<?= $cat->slug; ?>" title="Produkty Masarnia-Staropolska - <?= $cat->name; ?>">
-                                <h3 class="text-center"><?= $cat->name; ?></h3>
+                                <h3 class="text-center mea-culpa-font playfair-title-3"><?= $cat->name; ?></h3>
                                 <?php if (function_exists('z_taxonomy_image_url')) : ?>
                                     <img src="<?php echo z_taxonomy_image_url($cat->term_id, 'large'); ?>" class="img-fluid" alt="<?= $cat->name; ?>">
                                 <?php endif; ?>
