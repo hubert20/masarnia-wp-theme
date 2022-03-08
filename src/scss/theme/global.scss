@@ -1,12 +1,17 @@
 // Top Menu
 #top-header {
-    margin-top: 20px;
+    @include media-breakpoint-up(sm) {
+        margin-top: 20px;
+    }
 }
 
 .navbar-brand {
     &.top-logo {
         img {
-            width: 130px;
+            width: 80px;
+            @include media-breakpoint-up(xl) {
+                width: 130px;
+            }
         }
     }
 }
@@ -116,6 +121,12 @@
 // Footer-widget
 .footer-widgets {
     background-color: #131212;
+    border-top: 4px solid $brown-brand;
+    &__space-border {
+        width: 1px;
+        height: 70%;
+        background-color: #333;
+    }
 }
 
 .site-footer {

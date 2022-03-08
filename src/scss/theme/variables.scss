@@ -2,11 +2,11 @@
 // #Colors
 // ------------------------------------ //
 
-$red: yellow;
+$gray: #808080;
 $brown-brand: #774702;
 
-$names: (red, brown-brand);
-$colors: ($red, $brown-brand);
+$names: (gray, brown-brand);
+$colors: ($gray, $brown-brand);
 
 @each $name in $names {
     $i: index($names, $name);

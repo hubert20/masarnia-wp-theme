@@ -12,9 +12,7 @@
 ?>
 
 <footer class="site-footer" role="contentinfo">
-    <section class="footer-widgets">
-        <?php get_template_part('footer-widget'); ?>
-    </section>
+    <?php get_template_part('footer-widget'); ?>
 </footer>
 
 <div id="cookie-warn" class="cookie-warn">
