@@ -1,6 +1,9 @@
 <section class="main-categories py-3 py-lg-5" id="main-categories">
     <div class="container">
-        <h2 class="text-center mea-culpa-font playfair-title-2 text-brown-brand mb-3 mb-lg-5">Sprawdź produkty Masarnia-Staropolska</h2>
+        <h2 class="text-center standard-title-3 mb-3 mb-lg-4">
+            <span class="mea-culpa-font">Sprawdź produkty</span><br>
+            <span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
+        </h2>
         <div class="row">
             <?php
             $args = array('parent' => 18);
@@ -22,7 +25,7 @@
                     <div class="main-categories__item mb-3 mb-lg-4">
                         <figure class="main-categories__item-img m-0">
                             <a class="text-white" href="<?= $cat_link; ?>" data-category-type="<?= $cat->slug; ?>" title="Produkty Masarnia-Staropolska - <?= $cat->name; ?>">
-                                <h3 class="text-center mea-culpa-font playfair-title-3"><?= $cat->name; ?></h3>
+                                <h3 class="text-center oswald-font standard-title-4"><?= $cat->name; ?></h3>
                                 <?php if (function_exists('z_taxonomy_image_url')) : ?>
                                     <img src="<?php echo z_taxonomy_image_url($cat->term_id, 'large'); ?>" class="img-fluid" alt="<?= $cat->name; ?>">
                                 <?php endif; ?>
@@ -44,7 +47,7 @@
                             </a>
                         </figure>
                         <div class="main-categories__item-action">
-                        <i class="far fa-arrow-alt-circle-right"></i>
+                            <i class="far fa-arrow-alt-circle-right"></i>
                         </div>
                     </div>
                 </div>

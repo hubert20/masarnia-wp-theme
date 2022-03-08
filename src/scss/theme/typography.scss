@@ -3,107 +3,107 @@
 // ------------------------------------ //
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap");
 
 //Poppins
 $poppins-font-family: "Poppins", sans-serif;
 
-// Playfair
-$playfair-font-family: "Playfair Display", serif;
+// Oswald
+$oswald-font-family: "Oswald", sans-serif;
 
 // Mea Culpa
-$mea-culpa-font-family: 'Mea Culpa', cursive;
-
-.playfair-font {
-    font-family: $playfair-font-family !important;
-}
+$mea-culpa-font-family: "Mea Culpa", cursive;
 
 .mea-culpa-font {
-  font-family: $mea-culpa-font-family!important;
-} 
+  font-family: $mea-culpa-font-family !important;
+}
+
+.oswald-font {
+  font-family: $oswald-font-family !important;
+}
 
 html,
 body {
-    background: white;
-    font-family: $poppins-font-family;
+  background: white;
+  font-family: $poppins-font-family;
 }
 
 //Heading h1-h6 with Playfair font
 //h1 80px-50px
 @media (min-width: 360px) {
-    .playfair-title-1 {
-        font-size: calc(3.125rem + ((1vw - 3.6px) * 1.9231));
-        min-height: 0vw;
-    }
+  .standard-title-1 {
+    font-size: calc(3.125rem + ((1vw - 3.6px) * 1.9231));
+    min-height: 0vw;
+  }
 }
 @media (min-width: 1920px) {
-    .playfair-title-1 {
-        font-size: 80px;
-    }
+  .standard-title-1 {
+    font-size: 80px;
+  }
 }
 
 // h2 70px - 42px
 @media (min-width: 360px) {
-    .playfair-title-2 {
-      font-size: calc(2.625rem + ((1vw - 3.6px) * 1.7949));
-      min-height: 0vw;
-    }
+  .standard-title-2 {
+    font-size: calc(2.625rem + ((1vw - 3.6px) * 1.7949));
+    min-height: 0vw;
   }
-  @media (min-width: 1920px) {
-    .playfair-title-2 {
-      font-size: 70px;
-    }
+}
+@media (min-width: 1920px) {
+  .standard-title-2 {
+    font-size: 70px;
   }
+}
 
-  //h3 50px-34px
-  @media (min-width: 360px) {
-    .playfair-title-3 {
-      font-size: calc(2.125rem + ((1vw - 3.6px) * 1.0256));
-      min-height: 0vw;
-    }
+//h3 50px-34px
+@media (min-width: 360px) {
+  .standard-title-3 {
+    font-size: calc(2.125rem + ((1vw - 3.6px) * 1.0256));
+    min-height: 0vw;
   }
-  @media (min-width: 1920px) {
-    .playfair-title-3 {
-      font-size: 50px;
-    }
+}
+@media (min-width: 1920px) {
+  .standard-title-3 {
+    font-size: 50px;
   }
+}
 
-  //h4 40px-28px
-  @media (min-width: 360px) {
-    .playfair-title-4 {
-      font-size: calc(1.75rem + ((1vw - 3.6px) * 0.7692));
-      min-height: 0vw;
-    }
+//h4 40px-28px
+@media (min-width: 360px) {
+  .standard-title-4 {
+    font-size: calc(1.75rem + ((1vw - 3.6px) * 0.7692));
+    min-height: 0vw;
   }
-  @media (min-width: 1920px) {
-    .playfair-title-4 {
-      font-size: 40px;
-    }
+}
+@media (min-width: 1920px) {
+  .standard-title-4 {
+    font-size: 40px;
   }
+}
 
-  //h5 30px-24px
-  @media (min-width: 360px) {
-    .playfair-title-5 {
-      font-size: calc(1.5rem + ((1vw - 3.6px) * 0.3846));
-      min-height: 0vw;
-    }
+//h5 30px-24px
+@media (min-width: 360px) {
+  .standard-title-5 {
+    font-size: calc(1.5rem + ((1vw - 3.6px) * 0.3846));
+    min-height: 0vw;
   }
-  @media (min-width: 1920px) {
-    .playfair-title-5 {
-      font-size: 30px;
-    }
+}
+@media (min-width: 1920px) {
+  .standard-title-5 {
+    font-size: 30px;
   }
+}
 
-  //h6 25px - 20px
-  @media (min-width: 360px) {
-    .playfair-title-6 {
-      font-size: calc(1.25rem + ((1vw - 3.6px) * 0.3205));
-      min-height: 0vw;
-    }
+//h6 25px - 20px
+@media (min-width: 360px) {
+  .standard-title-6 {
+    font-size: calc(1.25rem + ((1vw - 3.6px) * 0.3205));
+    min-height: 0vw;
   }
-  @media (min-width: 1920px) {
-    .playfair-title-6 {
-      font-size: 25px;
-    }
+}
+@media (min-width: 1920px) {
+  .standard-title-6 {
+    font-size: 25px;
   }
+}

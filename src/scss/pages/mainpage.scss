@@ -67,3 +67,13 @@
         position: absolute;
     }
 }
+
+// Godziny otwarcia sklepów
+.opening-hours {
+    background-image: url('http://127.0.0.1:81/wordpress/wp-content/uploads/2022/03/opening-hours-bg-2.jpg');
+    background-position: center;
+    background-size: cover;
+    &__box {
+        border: 1px solid #ddd;
+    }
+}

@@ -1,9 +1,8 @@
-<section class="" style="height: 200px; background-color: pink;">
+<section class="">
 
 
 
-
-    <h2>Footer Widgets</h2>
+ccsdcsdc
 
 
 

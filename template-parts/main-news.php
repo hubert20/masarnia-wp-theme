@@ -1,6 +1,12 @@
 <section class="main-news py-4 py-lg-5">
-    <h2 class="text-center">Aktualności</h2>
-    <div class="<?php if ($news_after_campaign_visible) { echo 'd-block';} else {echo 'd-none';} ?>">
+    <h2 class="text-center standard-title-3 mb-3 mb-lg-4">
+        <span class="mea-culpa-font">Aktualności</span><br>
+    </h2>
+    <div class="<?php if ($news_after_campaign_visible) {
+                    echo 'd-block';
+                } else {
+                    echo 'd-none';
+                } ?>">
         <div class="row align-items-center mb-lg-5">
             <?php
             $query = new WP_Query(array('category_name' => 'aktualnosci', 'posts_per_page' => 3));
