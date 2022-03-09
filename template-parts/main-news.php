@@ -1,6 +1,7 @@
 <section class="main-news py-4 py-lg-5">
     <h2 class="text-center standard-title-3 mb-3 mb-lg-4">
         <span class="mea-culpa-font">Aktualności</span><br>
+        <span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
     </h2>
     <div class="<?php if ($news_after_campaign_visible) {
                     echo 'd-block';
