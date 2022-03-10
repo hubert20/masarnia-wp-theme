@@ -132,3 +132,96 @@
 .site-footer {
     background-color: #000000;
 }
+
+// Globat Section title
+.sc-title {
+    &__line {
+        position: relative;
+        &:before {
+            background-color: #ddd;
+            content: "";
+            position: absolute;
+            left: -60px;
+            width: 50px;
+            height: 1px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &:after {
+            background-color: #ddd;
+            content: "";
+            position: absolute;
+            right: -60px;
+            width: 50px;
+            height: 1px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+
+// Btns
+.btn-brand-brown {
+    @extend .btn;
+    background: $brown-brand;
+    color: #fff !important;
+    border-color: $brown-brand;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 16px;
+    padding: 10px 30px 12px;
+    transition-delay: 0.3s;
+    border-radius: 0;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+        border-style: solid;
+        left: -10px;
+        bottom: -10px;
+        border-top: none;
+        border-right: none;
+        border-color: $brown-brand;
+        transition: all 0.3s linear;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+        border-style: solid;
+        right: -10px;
+        top: -10px;
+        border-bottom: none;
+        border-left: none;
+        border-color: $brown-brand;
+        transition: all 0.3s linear;
+    }
+    &:hover,
+    &:focus {
+        color: $brown-brand !important;
+        background: #fff;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            height: 0;
+            left: 0;
+        }
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+            height: 0;
+            right: 0;
+        }
+    }
+}

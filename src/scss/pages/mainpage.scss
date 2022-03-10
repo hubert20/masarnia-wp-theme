@@ -40,7 +40,7 @@
                     transform: scale(1.03);
                 }
                 &:before {
-                    background-color: rgba(0, 0, 0, .60);
+                    background-color: rgba(0, 0, 0, 0.6);
                 }
             }
             h3 {
@@ -58,7 +58,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-color: rgba(0, 0, 0, .34);
+                background-color: rgba(0, 0, 0, 0.34);
                 z-index: 2;
             }
         }
@@ -70,10 +70,26 @@
 
 // Godziny otwarcia sklepów
 .opening-hours {
-    background-image: url('http://127.0.0.1:81/wordpress/wp-content/uploads/2022/03/opening-hours-bg-2.jpg');
+    background-image: url("http://127.0.0.1:81/wordpress/wp-content/uploads/2022/03/opening-hours-bg-2.jpg");
     background-position: center;
     background-size: cover;
     &__box {
         border: 1px solid #ddd;
+    }
+}
+
+// Main news
+.main-news {
+    &__item {
+        box-shadow: 0 0 22px #dedede;
+    }
+    &__item-cnt {
+        position: relative;
+    }
+    &__item-date {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

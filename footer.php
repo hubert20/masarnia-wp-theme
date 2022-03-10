@@ -22,7 +22,7 @@
             optymalizować. Używane są one również w celu tworzenia anonimowych statystyk pomagających zrozumieć, w jaki
             sposób
             użytkownik korzysta ze strony, z wyłączeniem jego personalnej identyfikacji.
-            <a class="cookie-warn__more-info-link text-red" target="_blank" href="https://www.wiosna.org.pl/main/pl/sec/252/article/3642.htm">Szczegóły
+            <a class="cookie-warn__more-info-link text-red" target="_blank" href="#">Szczegóły
                 w polityce prywatności <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>
         </span>

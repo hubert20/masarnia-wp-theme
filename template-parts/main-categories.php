@@ -1,12 +1,17 @@
 <section class="main-categories py-3 py-lg-5" id="main-categories">
     <div class="container">
-        <h2 class="text-center standard-title-3 mb-3 mb-lg-4">
+        <h2 class="text-center standard-title-3 mb-0">
             <span class="mea-culpa-font">Sprawdź produkty</span><br>
             <span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
         </h2>
+        <div class="sc-title d-flex justify-content-center mb-3 mb-lg-4">
+            <div class="sc-title__line">
+                <img width="50" height="50" src="/wp-content/uploads/2022/03/flower-decor-2.png" class="" alt="">
+            </div>
+        </div>
         <div class="row">
             <?php
-            $args = array('parent' => 18);
+            $args = array('parent' => 2);
             $cats = get_categories($args);
             foreach ($cats as $cat) : ?>
                 <?php
