@@ -225,3 +225,23 @@
         }
     }
 }
+
+//pagination 
+.pagination {
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 40px 0;
+    font-size: 1.15em;
+
+    .page-numbers {
+        color: rgba(black, 0.65);
+        display: inline-block;
+        margin: 0 5px;
+
+        &.current {
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}

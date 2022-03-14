@@ -16,14 +16,24 @@
     }
 }
 
-// Main categories section
+// Main categories
 .main-categories {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     &__item {
-        border: 1px solid rgba(119, 71, 2, 0.2);
+        box-shadow: 0 0 22px 1px rgba(0, 0, 0, 0.45);
         position: relative;
+        @include media-breakpoint-up(xl) {
+            &:hover {
+                .icon-action {
+                    opacity: 1;
+                    .ico {
+                        animation: circle-arrow 1.15s linear infinite;
+                    }
+                }
+            }
+        }
     }
     &__item-img {
         overflow: hidden;
@@ -48,6 +58,13 @@
                 z-index: 9;
                 top: 0;
                 left: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-shadow: 2px 2px 2px #000;
             }
             &:before {
                 content: "";
@@ -63,8 +80,22 @@
             }
         }
     }
-    &__item-action {
+    .icon-action {
         position: absolute;
+        transition: all 0.3s ease-out 0s;
+        width: 3.25rem;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        height: 3.25rem;
+        opacity: 0;
+        z-index: 3;
+        position: absolute;
+        left: 1.875rem;
+        bottom: 1.875rem;
+        .ico {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -82,6 +113,19 @@
 .main-news {
     &__item {
         box-shadow: 0 0 22px #dedede;
+        a {
+            overflow: hidden;
+            img {
+                transition: transform 400ms ease-in-out;
+            }
+        }
+        &:hover {
+            a {
+                img {
+                    transform: scale(1.10);
+                }
+            }
+        }
     }
     &__item-cnt {
         position: relative;
@@ -91,5 +135,71 @@
         top: -20px;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+// Main abbout
+.masarnia-o-nas {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    &__bg-mask {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+// Animation Circle Arrow
+@-webkit-keyframes circle-arrow {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    25% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    75% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes circle-arrow {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    25% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    75% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }

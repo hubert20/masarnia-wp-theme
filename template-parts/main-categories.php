@@ -1,17 +1,22 @@
-<section class="main-categories py-3 py-lg-5" id="main-categories">
+<?php
+$main_categories_icon = get_field('main_categories_icon');
+$main_categories_title = get_field('main_categories_title');
+$main_categories_background = get_field('main_categories_background');
+?>
+
+<section class="main-categories py-3 py-lg-5" id="main-categories" style="background-image: url('<?php echo $main_categories_background; ?>');">
     <div class="container">
         <h2 class="text-center standard-title-3 mb-0">
-            <span class="mea-culpa-font">Sprawdź produkty</span><br>
-            <span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
+            <?php echo $main_categories_title; ?>
         </h2>
         <div class="sc-title d-flex justify-content-center mb-3 mb-lg-4">
             <div class="sc-title__line">
-                <img width="50" height="50" src="/wp-content/uploads/2022/03/flower-decor-2.png" class="" alt="">
+                <img width="50" height="50" src="<?php echo $main_categories_icon['url']; ?>" class="img-fluid mx-auto" alt="<?php echo $main_categories_icon['alt']; ?>">
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <?php
-            $args = array('parent' => 2);
+            $args = array('parent' => '18');
             $cats = get_categories($args);
             foreach ($cats as $cat) : ?>
                 <?php
@@ -51,8 +56,8 @@
                                 <?php endif; */ ?>
                             </a>
                         </figure>
-                        <div class="main-categories__item-action">
-                            <i class="far fa-arrow-alt-circle-right"></i>
+                        <div class="main-categories__item-action icon-action d-flex align-items-center justify-content-center">
+                            <i class="ico fa fa-angle-right" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ get_header(); ?>
                     Przepraszamy za kłopot. A korzystając z okazji chcemy Ci podziękować, że jesteś z nami.
                 </p>
 
-                <a href="/" class="btn btn-red btn-lg">Przejdź na szlachetnapaczka.pl ></a>
+                <a href="/" class="btn btn-red btn-lg">Przejdź na www. ></a>
             </div>
         </div>
     </div>

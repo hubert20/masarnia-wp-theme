@@ -34,20 +34,20 @@ $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/
                                 $image  = wp_get_attachment_image_src($imgID, 'large', false, '');
                                 $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
                                 ?>
-                                <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid" style="border: 1px solid rgba(119, 71, 2, .2);">
+                                <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                             <?php else : ?>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/produkty-masarnia-staropolska.jpg" class="img-fluid" style="border: 1px solid rgba(119, 71, 2, .2);">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/produkty-masarnia-staropolska.jpg" class="img-fluid" style="border-radius: 20px;border: 1px solid rgba(119, 71, 2, .2);">
                             <?php endif; ?>
                         </figure>
                         <!-- Product title -->
-                        <h3 class="products-boxes__title my-3 my-lg-4 mea-culpa-font playfair-title-3 text-brown-brand">
+                        <h3 class="products-boxes__title my-3 my-lg-4">
                             <strong><?php the_title(); ?></strong>
                         </h3>
                         <!-- product desc slide content -->
                         <div class="product__content slide-up-content p-3 p-lg-4">
                             <div class="slide-up-content__content">
-                                <h3 class="products-boxes__title mb-3 mb-lg-4 mea-culpa-font playfair-title-3">
-                                   <?php the_title(); ?>
+                                <h3 class="products-boxes__title mb-3 mb-lg-4">
+                                    <strong><?php the_title(); ?></strong>
                                 </h3>
                                 <div class="overflow-auto"><?php the_content(); ?></div>
                             </div>
@@ -90,7 +90,7 @@ $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/
         left: 0;
         right: 0;
         transition: .3s ease-in-out;
-        /*border-radius: 20px;*/
+        border-radius: 20px;
     }
 
     .products-boxes .product__content.active {
