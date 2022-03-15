@@ -22,33 +22,28 @@ if (in_category('wedzonki')) {
     $top_header_image = get_field('top_header_image', 1083);
     $top_header_icon = get_field('top_header_icon', 1083);
 } else if (in_category('suche-i-podsuszane')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 1075);
+    $top_header_image = get_field('top_header_image', 1075);
+    $top_header_icon = get_field('top_header_icon', 1075);
 } else if (in_category('pasztety')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
-} else if (in_category('pasztety')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 1046);
+    $top_header_image = get_field('top_header_image', 1046);
+    $top_header_icon = get_field('top_header_icon', 1046);
 } else if (in_category('kielbasy-grube')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 1088);
+    $top_header_image = get_field('top_header_image', 1088);
+    $top_header_icon = get_field('top_header_icon', 1088);
 } else if (in_category('kielbasy-cienkie')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 1085);
+    $top_header_image = get_field('top_header_image', 1085);
+    $top_header_icon = get_field('top_header_icon', 1085);
 } else if (in_category('garmazerka')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 1099);
+    $top_header_image = get_field('top_header_image', 1099);
+    $top_header_icon = get_field('top_header_icon', 1099);
 } else {
     $body_background = get_field('tlo');
 }
-
 ?>
 
 <div class="page-header-top page-header-top-<?php echo $name_cat; ?> d-flex flex-column align-items-center justify-content-center" style="background-image: url('<?php echo $top_header_image; ?>');">
@@ -68,9 +63,9 @@ if (in_category('wedzonki')) {
         <div id="products-boxes" class="row">
             <?php
             while (have_posts()) : the_post(); ?>
-                <div class="col-sm-12 col-lg-4 mb-2 products-list__item">
-                    <div class="products-boxes__item" style="position: relative;overflow: hidden;">
-                        <figure class="products-boxes__img">
+                <div class="col-sm-12 col-lg-4 mb-3 mb-lg-4">
+                    <div class="products-boxes__item">
+                        <figure class="products-boxes__img mb-3">
                             <?php if (has_post_thumbnail($post->ID)) : ?>
                                 <?php
                                 $imgID  = get_post_thumbnail_id($post->ID);
@@ -83,29 +78,25 @@ if (in_category('wedzonki')) {
                             <?php endif; ?>
                         </figure>
                         <!-- Product title -->
-                        <h3 class="products-boxes__title my-3 my-lg-4">
+                        <h3 class="products-boxes__title mb-3 oswald-font standard-title-6">
                             <strong><?php the_title(); ?></strong>
                         </h3>
                         <!-- product desc slide content -->
                         <div class="product__content slide-up-content p-3 p-lg-4">
                             <div class="slide-up-content__content">
-                                <h3 class="products-boxes__title mb-3 mb-lg-4 oswald-font standard-title-5">
+                                <h3 class="products-boxes__title mb-3 oswald-font standard-title-6">
                                     <strong><?php the_title(); ?></strong>
                                 </h3>
-                                <div class="overflow-auto fw-light"><?php the_content(); ?></div>
+                                <div class="products-boxes__desc overflow-auto fw-light"><?php the_content(); ?></div>
                             </div>
-                            <span class="slide-up-content__close close-content">
+                            <span class="slide-up-content__close close-content d-flex d-lg-none justify-content-center flex-column align-items-center" title="Zamknij">
                                 <span class="close-button"></span>
-                                <span class="close-label">
-                                    zamknij
-                                </span>
                             </span>
                         </div>
                         <!-- Product button see more -->
                         <footer class="product__footer product__see-more">
-                            <span class="see-more-content color-black">
-                                Dowiedz się więcej
-                                <i class="icon icon-caret-down color-red"></i>
+                            <span class="see-more-content btn btn-sm no-border-radius bg-white">
+                                Dowiedz się więcej <i class="fa fa-angle-right"></i>
                             </span>
                         </footer>
                     </div>

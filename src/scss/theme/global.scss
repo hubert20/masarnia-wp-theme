@@ -72,7 +72,9 @@
     background: #fff;
     border-radius: 0;
     padding: 0;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    @include media-breakpoint-up(xl) {
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
     min-width: 13rem;
     border: none;
     .menu-item {
@@ -233,12 +235,10 @@
     font-weight: bold;
     margin: 40px 0;
     font-size: 1.15em;
-
     .page-numbers {
         color: rgba(black, 0.65);
         display: inline-block;
         margin: 0 5px;
-
         &.current {
             color: black;
             text-decoration: underline;
@@ -251,6 +251,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    &__item {
+        position: relative;
+        overflow: hidden;
+        @include media-breakpoint-up(lg) {
+            &:hover {
+                .product {
+                    &__content {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
     .product {
         &__content {
             display: flex;
@@ -268,6 +281,40 @@
             &.active {
                 top: 0;
             }
+        }
+    }
+    .see-more-content {
+        border: 1px solid $brown-brand;
+    }
+    .close-button {
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        &:before,
+        &::after {
+            position: absolute;
+            left: 15px;
+            content: " ";
+            height: 33px;
+            width: 2px;
+            background-color: #fff;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+    &__desc {
+        height: 300px;
+        @include media-breakpoint-up(lg) {
+            height: 370px;
         }
     }
 }
