@@ -226,7 +226,7 @@
     }
 }
 
-//pagination 
+//pagination
 .pagination {
     text-align: center;
     justify-content: center;
@@ -242,6 +242,32 @@
         &.current {
             color: black;
             text-decoration: underline;
+        }
+    }
+}
+
+// Product box
+.products-boxes {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .product {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #323232;
+            color: #fff;
+            padding: 35px 25px 15px;
+            position: absolute;
+            top: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: 0.3s ease-in-out;
+            &.active {
+                top: 0;
+            }
         }
     }
 }
