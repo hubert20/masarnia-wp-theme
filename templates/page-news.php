@@ -9,10 +9,10 @@ get_header();
 $header_image = get_field('top_header_image');
 $top_header_title = get_field('top_header_title');
 $top_header_icon = get_field('top_header_icon');
-
+$body_background = get_field('tlo');
 ?>
 
-<div class="page-header-top page-header-top-<?php echo $name_cat; ?> mb-3 mb-lg-5 d-flex flex-column align-items-center justify-content-center" style="background-image: url('<?php echo $header_image; ?>')">
+<div class="page-header-top d-flex flex-column align-items-center justify-content-center" style="background-image: url('<?php echo $header_image; ?>')">
     <h1 class="page-header-top__title standard-title-3 mb-0 text-center">
         <?php echo $top_header_title; ?>
     </h1>
@@ -22,16 +22,16 @@ $top_header_icon = get_field('top_header_icon');
         </div>
     </div>
 </div>
-<main id="main" class="page-news mb-4 mb-lg-5" role="main">
+<main id="main" class="page-news py-4 py-lg-5" role="main" style="background-image: url('<?php echo $body_background; ?>')">
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $args = array('category_name' => 'news', 'post_type' => 'post', 'posts_per_page' => 3, 'paged' => $paged);
+    $args = array('category_name' => 'news', 'post_type' => 'post', 'posts_per_page' => 9, 'paged' => $paged);
     $wp_query = new WP_Query($args);
     ?>
     <div class="container">
         <div class="row justify-items-center">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="col-md-5 col-lg-4 mb-3 d-flex flex-column">
+                <div class="col-md-5 col-lg-4 mb-3 mb-lg-4 d-flex flex-column">
                     <div class="main-news__item flex-grow-1 d-flex flex-column">
                         <?php if (has_post_thumbnail($post->ID)) : ?>
                             <?php
@@ -39,7 +39,7 @@ $top_header_icon = get_field('top_header_icon');
                             $image  = wp_get_attachment_image_src($imgID, 'blog-width', false, '');
                             $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
                             ?>
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="d-block">
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="d-block bg-white">
                                 <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid main-news__img">
                             </a>
                         <?php endif; ?>

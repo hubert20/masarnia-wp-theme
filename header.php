@@ -28,7 +28,7 @@
         </div>
     </div>
     <header id="top-header" class="fixed-top" role="banner">
-        <div class="container bg-white">
+        <div class="container bg-white top-header-menu">
             <nav class="navbar navbar-expand-xl navbar-theme">
                 <?php if (get_theme_mod('masarnia_wp_theme_logo')) : ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand align-items-center top-logo">

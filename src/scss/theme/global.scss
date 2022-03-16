@@ -16,6 +16,12 @@
     }
 }
 
+.top-header-menu {
+    @include media-breakpoint-up(xl) {
+        box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
+    }
+}
+
 #top-header {
     .navbar-nav {
         > li {
@@ -112,12 +118,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/wp-content/uploads/2022/02/kategorie-masarnia-staropolska.jpg");
-    &__title {
-    }
-    &.page-header-top-kielbasy {
-        background-image: url("/wp-content/uploads/2022/02/kategorie-masarnia-staropolska.jpg");
-    }
 }
 
 // Footer-widget
@@ -269,7 +269,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-color: #323232;
+            background-color: rgba(30, 30, 30, 0.9);
             color: #fff;
             padding: 35px 25px 15px;
             position: absolute;
@@ -285,6 +285,7 @@
     }
     .see-more-content {
         border: 1px solid $brown-brand;
+        border-radius: 0;
     }
     .close-button {
         transition: 0.3s ease-in-out;
@@ -317,4 +318,22 @@
             height: 370px;
         }
     }
+}
+
+// Links
+a {
+    &.text-brown-brand {
+        &:hover,
+        &:focus {
+            color: #000 !important;
+        }
+    }
+}
+
+// Error 404
+.error404 {
+    background-image: url('/wp-content/uploads/2022/03/opening-hours-bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

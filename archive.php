@@ -14,33 +14,33 @@ $name = get_the_archive_title();
 $name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/', '-', $name)));
 
 if (in_category('wedzonki')) {
-    $body_background = get_field('tlo', 1108);
-    $top_header_image = get_field('top_header_image', 1108);
-    $top_header_icon = get_field('top_header_icon', 1108);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('szynki')) {
-    $body_background = get_field('tlo', 1083);
-    $top_header_image = get_field('top_header_image', 1083);
-    $top_header_icon = get_field('top_header_icon', 1083);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('suche-i-podsuszane')) {
-    $body_background = get_field('tlo', 1075);
-    $top_header_image = get_field('top_header_image', 1075);
-    $top_header_icon = get_field('top_header_icon', 1075);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('pasztety')) {
-    $body_background = get_field('tlo', 1046);
-    $top_header_image = get_field('top_header_image', 1046);
-    $top_header_icon = get_field('top_header_icon', 1046);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('kielbasy-grube')) {
-    $body_background = get_field('tlo', 1088);
-    $top_header_image = get_field('top_header_image', 1088);
-    $top_header_icon = get_field('top_header_icon', 1088);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('kielbasy-cienkie')) {
-    $body_background = get_field('tlo', 1085);
-    $top_header_image = get_field('top_header_image', 1085);
-    $top_header_icon = get_field('top_header_icon', 1085);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else if (in_category('garmazerka')) {
-    $body_background = get_field('tlo', 1099);
-    $top_header_image = get_field('top_header_image', 1099);
-    $top_header_icon = get_field('top_header_icon', 1099);
+    $body_background = get_field('tlo', 47);
+    $top_header_image = get_field('top_header_image', 47);
+    $top_header_icon = get_field('top_header_icon', 47);
 } else {
     $body_background = get_field('tlo');
 }
