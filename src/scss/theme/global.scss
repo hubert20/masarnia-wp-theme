@@ -5,10 +5,32 @@
     }
 }
 
+// Tom menu with scroll
+#top-header {
+    &.sticky {
+        transition: 0.3s ease-in-out;
+        @include media-breakpoint-up(xl) {
+            margin-top: 0;
+            .top-header-menu {
+                max-width: 100%;
+                transition: 0.3s ease-in-out;
+            }
+            .navbar-brand {
+                &.top-logo {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .navbar-brand {
     &.top-logo {
         img {
             width: 80px;
+            transition: 0.3s ease-in-out;
             @include media-breakpoint-up(xl) {
                 width: 130px;
             }
@@ -361,7 +383,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fcfcfc;
+    background-color: rgba(255, 255, 255, 0.1);
     // &:after {
     //     transform: scaleX(1.25) scaleY(1.09);
     //     content: "";
@@ -381,14 +403,14 @@ a {
         position: relative;
         height: 40px;
         width: 25px;
-        border: solid 2px #1a2f33;
+        border: solid 2px #fff;
         border-radius: 20px;
         &:before {
             content: "";
             height: 4px;
             width: 4px;
             border-radius: 50%;
-            background-color: #1a2f33;
+            background-color: #fff;
             position: absolute;
             top: 7px;
             left: 50%;
@@ -429,5 +451,41 @@ a {
     100% {
         -webkit-transform: translateY(0) translateX(-50%);
         transform: translateY(0) translateX(-50%);
+    }
+}
+
+//Qookis
+.cookie-warn {
+    box-sizing: border-box;
+    z-index: 99999;
+    overflow: hidden;
+    color: #444;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__left-side {
+        font-size: 12px;
+    }
+    &__right-side {
+        font-size: 14px;
+    }
+    &__close-cookie-info {
+        background: #e21927;
+        color: #fff;
+        border: 0;
+        padding: 6px 9px;
+        border-radius: 3px;
+        margin: 0 0 0 20px;
+        text-decoration: none !important;
     }
 }

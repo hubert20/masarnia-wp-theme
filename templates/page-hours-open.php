@@ -22,7 +22,7 @@ $open_hours_cnt = get_field('open_hours_cnt');
         </div>
     </div>
 </div>
-<main id="main" class="page-open-hours py-4 py-lg-5" role="main" style="background-image: url('<?php echo $body_background; ?>')">
+<main id="main" class="page-open-hours py-4 py-lg-5" role="main">
     <div class="container">
         <?php echo $open_hours_cnt; ?>
     </div>

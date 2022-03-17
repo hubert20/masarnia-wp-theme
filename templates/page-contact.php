@@ -10,7 +10,7 @@ $top_header_icon = get_field('top_header_icon');
 $open_hours_cnt = get_field('open_hours_cnt');
 ?>
 
-<div class="page-header-top d-flex flex-column align-items-center justify-content-center mb-3 mb-lg-5" style="background-image: url('<?php echo $header_image; ?>')">
+<div class="page-header-top d-flex flex-column align-items-center justify-content-center mb-4 mb-lg-5" style="background-image: url('<?php echo $header_image; ?>')">
     <h1 class="page-header-top__title standard-title-3 mb-0 text-center">
         <span class="mea-culpa-font text-white"><?php the_title(); ?></span>
         <br><span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
@@ -21,7 +21,7 @@ $open_hours_cnt = get_field('open_hours_cnt');
         </div>
     </div>
 </div>
-<main id="main" class="page-open-hours" role="main" style="background-image: url('<?php echo $body_background; ?>')">
+<main id="main" class="page-open-hours" role="main">
     <div class="container">
         <?php
         while (have_posts()) : the_post();
