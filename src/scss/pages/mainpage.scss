@@ -5,6 +5,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    &__cnt {
+        position: relative;
+    }
 }
 
 @include media-breakpoint-up(lg) {

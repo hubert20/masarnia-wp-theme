@@ -320,6 +320,12 @@
     }
 }
 
+.tst-icon-box {
+    img {
+        width: 70px;
+    }
+}
+
 // Links
 a {
     &.text-brown-brand {
@@ -332,8 +338,96 @@ a {
 
 // Error 404
 .error404 {
-    background-image: url('/wp-content/uploads/2022/03/opening-hours-bg-2.jpg');
+    background-image: url("/wp-content/uploads/2022/03/opening-hours-bg-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+// Scroll to section icon
+.tst-scroll-hint-frame {
+    transform: scale(1);
+    transition: 0.6s ease-in-out;
+}
+
+.tst-scroll-hint-frame {
+    height: 74px;
+    width: 74px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 37px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfc;
+    // &:after {
+    //     transform: scaleX(1.25) scaleY(1.09);
+    //     content: "";
+    //     width: 74px;
+    //     height: 37px;
+    //     opacity: 0.15;
+    //     border-radius: 1000px 1000px 0 0;
+    //     position: absolute;
+    //     top: -11.6%;
+    //     background-color: #f2f6f7;
+    //     z-index: -2;
+    // }
+    .tst-scroll-hint {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        top: -5px;
+        position: relative;
+        height: 40px;
+        width: 25px;
+        border: solid 2px #1a2f33;
+        border-radius: 20px;
+        &:before {
+            content: "";
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: #1a2f33;
+            position: absolute;
+            top: 7px;
+            left: 50%;
+            -webkit-animation: scroll 1s infinite;
+            animation: scroll 1s infinite;
+        }
+    }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+
+    50% {
+        -webkit-transform: translateY(6px) translateX(-50%);
+        transform: translateY(6px) translateX(-50%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+
+    50% {
+        -webkit-transform: translateY(6px) translateX(-50%);
+        transform: translateY(6px) translateX(-50%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
 }
