@@ -47,9 +47,9 @@ if (in_category('wedzonki')) {
 ?>
 
 <div class="page-header-top page-header-top-<?php echo $name_cat; ?> d-flex flex-column align-items-center justify-content-center" style="background-image: url('<?php echo $top_header_image; ?>');">
-    <h1 class="page-header-top__title text-white text-center standard-title-3 mb-0">
+    <h1 class="page-header-top__title text-white text-center standard-title-3 mb-0 mt-5 title-custom-page">
         <span class="mea-culpa-font"><?php the_archive_title(); ?></span>
-        <br><span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
+        <br><span class="oswald-font text-white fw-bold page-header-top__title-brand ">STAROPOLSKA MASARNIA</span>
     </h1>
     <div class="sc-title d-flex justify-content-center mb-3 mb-lg-4">
         <div class="sc-title__line">

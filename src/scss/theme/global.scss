@@ -32,7 +32,7 @@
             width: 80px;
             transition: 0.3s ease-in-out;
             @include media-breakpoint-up(xl) {
-                width: 130px;
+                width: 110px;
             }
         }
     }
@@ -47,11 +47,26 @@
 #top-header {
     .navbar-nav {
         > li {
+            // @include media-breakpoint-up(xl) {
+            //     position: relative;
+            //     &:after {
+            //         content: "";
+            //         width: 1px;
+            //         height: 60%;
+            //         background: #919191;
+            //         display: inline-block;
+            //         position: absolute;
+            //         right: 0;
+            //         top: 0;
+            //         bottom: 0;
+            //         margin: auto;
+            //     }
+            // }
             > a {
                 color: #1e2125;
                 padding: 0.5rem 0.7rem;
                 margin: 0 10px;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 font-weight: 600;
                 &:hover {
                     color: $brown-brand;
@@ -59,7 +74,7 @@
             }
             &.current_page_item {
                 > a {
-                    color: #1e2125;
+                    color: #774702;
                     text-decoration: underline;
                 }
             }
@@ -114,6 +129,7 @@
     .dropdown-item {
         padding: 1rem 1rem 1rem 1.5rem;
         font-weight: 500;
+        font-size: 1.1rem;
         &:before {
             font-family: FontAwesome;
             content: "\f105";
@@ -136,10 +152,16 @@
 
 // Category top
 .page-header-top {
-    height: 430px;
+    height: 290px;
+    @include media-breakpoint-up(xl) {
+        height: 430px;
+    }
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    &__title-brand {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+    }
 }
 
 // Footer-widget

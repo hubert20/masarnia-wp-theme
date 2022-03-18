@@ -62,6 +62,19 @@ body {
 }
 
 //Heading h1-h6 with Playfair font
+//Title big 105px-50px
+@media (min-width: 360px) {
+  .standard-title-big {
+    font-size: calc(3.125rem + ((1vw - 3.6px) * 3.5256));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-big {
+    font-size: 105px;
+  }
+}
+
 //h1 80px-50px
 @media (min-width: 360px) {
   .standard-title-1 {

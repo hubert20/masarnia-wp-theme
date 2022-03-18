@@ -11,9 +11,9 @@ $open_hours_cnt = get_field('open_hours_cnt');
 ?>
 
 <div class="page-header-top d-flex flex-column align-items-center justify-content-center mb-4 mb-lg-5" style="background-image: url('<?php echo $header_image; ?>')">
-    <h1 class="page-header-top__title standard-title-3 mb-0 text-center">
+    <h1 class="page-header-top__title standard-title-3 mb-0 text-center mt-5 title-custom-page">
         <span class="mea-culpa-font text-white"><?php the_title(); ?></span>
-        <br><span class="oswald-font text-brown-brand fw-bold">STAROPOLSKA MASARNIA</span>
+        <br><span class="oswald-font text-white fw-bold page-header-top__title-brand">STAROPOLSKA MASARNIA</span>
     </h1>
     <div class="sc-title d-flex justify-content-center">
         <div class="sc-title__line">

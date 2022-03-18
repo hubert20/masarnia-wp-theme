@@ -9,6 +9,11 @@ $main_categories_background = get_field('main_categories_background');
         <h2 class="text-center standard-title-3 mb-0">
             <?php echo $main_categories_title; ?>
         </h2>
+        <h5 class="text-center standard-title-5 oswald-font fw-bold">
+            Do produkcji naszych wyrobów używamy
+            wyłącznie mięsa najwyższej jakości,<br>
+            tradycyjnych składników i&nbsp;przypraw naturalnych.
+        </h5>
         <div class="sc-title d-flex justify-content-center mb-3 mb-lg-4">
             <div class="sc-title__line">
                 <img width="50" height="50" src="<?php echo $main_categories_icon['url']; ?>" class="img-fluid mx-auto" alt="<?php echo $main_categories_icon['alt']; ?>">
@@ -16,7 +21,7 @@ $main_categories_background = get_field('main_categories_background');
         </div>
         <div class="row justify-content-center">
             <?php
-            $args = array('parent' => '18');
+            $args = array('parent' => '2');
             $cats = get_categories($args);
             foreach ($cats as $cat) : ?>
                 <?php

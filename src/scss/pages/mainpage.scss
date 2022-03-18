@@ -1,13 +1,9 @@
-// Mainpage
-
 // Top Hero
 .top-hero {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &__cnt {
-        position: relative;
-    }
+    position: relative;
 }
 
 @include media-breakpoint-up(lg) {
@@ -16,6 +12,35 @@
         &__cnt {
             height: 100vh;
         }
+    }
+}
+
+// Animations hero
+.top-hero {
+    &__title {
+        animation: slide-down 1s forwards;
+    }
+    &__subtitle {
+        animation: slide-down 1.2s forwards;
+        text-shadow: 2px 2px 2px #000;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 10rem 0;
+    }
+}
+
+.title-custom-page {
+    animation: slide-down 1.2s forwards;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
     }
 }
 
@@ -124,7 +149,7 @@
         &:hover {
             a {
                 img {
-                    transform: scale(1.10);
+                    transform: scale(1.1);
                 }
             }
         }

@@ -29,7 +29,7 @@
     </div>
     <header id="top-header" class="fixed-top" role="banner">
         <div class="container bg-white top-header-menu">
-            <nav class="navbar navbar-expand-xl navbar-theme">
+            <nav class="navbar navbar-expand-xl navbar-theme oswald-font">
                 <?php if (get_theme_mod('masarnia_wp_theme_logo')) : ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand align-items-center top-logo">
                         <img src="<?php echo esc_url(get_theme_mod('masarnia_wp_theme_logo')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
