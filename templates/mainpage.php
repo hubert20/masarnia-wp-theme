@@ -30,11 +30,5 @@ $hero_widget = get_field('hero_widget');
 <!-- Opening hours -->
 <?php get_template_part('template-parts/main-opening-hours'); ?>
 
-<?php
-while (have_posts()) : the_post();
-    the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter'));
-endwhile;
-?>
-
 
 <?php get_footer(); ?>

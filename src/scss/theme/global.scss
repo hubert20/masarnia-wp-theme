@@ -32,7 +32,7 @@
             width: 80px;
             transition: 0.3s ease-in-out;
             @include media-breakpoint-up(xl) {
-                width: 110px;
+                width: 100px;
             }
         }
     }
@@ -271,6 +271,71 @@
         }
     }
 }
+
+.btn-brand-white {
+    @extend .btn;
+    background: #fff;
+    color: $brown-brand !important;
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 16px;
+    padding: 10px 30px 12px;
+    transition-delay: 0.3s;
+    border-radius: 0;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+        border-style: solid;
+        left: -10px;
+        bottom: -10px;
+        border-top: none;
+        border-right: none;
+        border-color: #fff;
+        transition: all 0.3s linear;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+        border-style: solid;
+        right: -10px;
+        top: -10px;
+        border-bottom: none;
+        border-left: none;
+        border-color: #fff;
+        transition: all 0.3s linear;
+    }
+    &:hover,
+    &:focus {
+        color: #fff !important;
+        background: $brown-brand;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            height: 0;
+            left: 0;
+        }
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+            height: 0;
+            right: 0;
+        }
+    }
+}
+
+
 
 //pagination
 .pagination {

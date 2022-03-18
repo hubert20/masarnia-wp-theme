@@ -25,6 +25,14 @@ $about_us_cnt = get_field('about_us_cnt');
 <main id="main" class="page-open-hours py-4 py-lg-5" role="main">
     <div class="container">
         <?php echo $about_us_cnt; ?>
+
+        <?php
+        while (have_posts()) : the_post();
+            the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter'));
+        endwhile;
+        ?>
+
+
     </div>
 </main>
 
