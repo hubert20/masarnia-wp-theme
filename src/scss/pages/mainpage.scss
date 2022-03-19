@@ -230,3 +230,27 @@
         transform: translateX(0);
     }
 }
+
+// Animation hero text
+svg.animation-hero-txt text {
+    font-family: $mea-culpa-font-family;
+    letter-spacing: 10px;
+    stroke: black;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: rgb(255, 255, 255);
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: rgb(255, 255, 255);
+    }
+}
