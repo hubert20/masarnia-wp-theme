@@ -25,4 +25,10 @@ jQuery(function ($) {
             navbar.classList.remove('sticky');
         }
     }
+    // Fireflay
+    if ($(".into_firefly").length) {
+        $.firefly({
+            color: '#e59726', minPixel: 1, maxPixel: 2, total: 40, on: '.into_firefly'
+        });
+    }
 });

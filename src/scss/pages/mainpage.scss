@@ -4,6 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    z-index: 0;
 }
 
 @include media-breakpoint-up(lg) {
@@ -252,5 +253,21 @@ svg.animation-hero-txt text {
         stroke-dasharray: 50% 0;
         stroke-dashoffstet: -20%;
         fill: rgb(255, 255, 255);
+    }
+}
+
+// Fireflay
+.into_firefly {
+    @include media-breakpoint-up(lg) {
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+    }
+
+    div {
+        opacity: 0.9 !important;
+        box-shadow: 0 0 10px 1px #ffb54a;
     }
 }

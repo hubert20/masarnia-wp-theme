@@ -9,6 +9,7 @@ $hero_widget = get_field('hero_widget');
 <section class="top-hero">
     <?php echo $hero_cnt; ?>
     <?php echo $hero_widget; ?>
+    <div class="into_firefly d-none d-lg-block"></div>
 </section>
 
 <!-- Style hero -->

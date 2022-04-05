@@ -15,6 +15,11 @@ function wp_masarnia_scripts()
   wp_enqueue_style('font-awesome-4', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), null);
   wp_enqueue_script('jquery');
   wp_enqueue_script('my_javascript_file', get_template_directory_uri() . '/dist/main.bundle.js', array('jquery'), $ver_num);
+
+  // Page strefa-darczyncy
+  if (is_page_template('templates/mainpage.php')) {
+    wp_enqueue_script('firefly-js', get_template_directory_uri() . '/vendor/jquery.firefly-0.7.min.js', array('jquery'), '', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'wp_masarnia_scripts');
 
@@ -171,19 +176,19 @@ function wpmudev_custom_image_sizes($sizes)
 // Gets post cat slug and looks for single-[cat slug].php and applies it
 add_filter('single_template', function ($the_template) {
   foreach ((array) get_the_category() as $cat) {
-      if (file_exists(TEMPLATEPATH . "/templates/single-{$cat->slug}.php"))
-          return TEMPLATEPATH . "/templates/single-{$cat->slug}.php";
+    if (file_exists(TEMPLATEPATH . "/templates/single-{$cat->slug}.php"))
+      return TEMPLATEPATH . "/templates/single-{$cat->slug}.php";
   }
 });
 
 // IF IS PAGE CHILD TREE
 function is_tree($pid)
 {      // $pid = The ID of the page we're looking for pages underneath
-    global $post;         // load details about this page
-    if (is_page() && ($post->post_parent == $pid || is_page($pid)))
-        return true;   // we're at the page or at a sub page
-    else
-        return false;  // we're elsewhere
+  global $post;         // load details about this page
+  if (is_page() && ($post->post_parent == $pid || is_page($pid)))
+    return true;   // we're at the page or at a sub page
+  else
+    return false;  // we're elsewhere
 };
 
 add_filter('show_admin_bar', '__return_false');
