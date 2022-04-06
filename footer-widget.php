@@ -15,7 +15,7 @@
             <div class="col-lg-3 text-center">
                 <h5 class="text-white standard-title-6 oswald-font mb-4">Napisz do nas:</h5>
                 <p class="text-white oswald-font"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:biuro@staropolska-masarnia.pl" title="biuro@staropolska-masarnia.pl" class="text-decoration-none text-white">biuro@staropolska-masarnia.pl</a> </p>
-                <p class="text-white oswald-font"> <i class="fa fa-phone" aria-hidden="true"></i> 24 235 30-36</p>
+                <p class="text-white oswald-font"> <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+48243695060" class="text-white text-decoration-none">24 369 50 60</a></p>
                 <p class="text-white oswald-font"><i class="fa fa-link" aria-hidden="true"></i> <a href="http://www.staropolska-masarnia.pl" title="www.staropolska-masarnia.pl" class="text-decoration-none text-white">www.staropolska-masarnia.pl</a></p>
             </div>
             <div class="col-lg-1 d-none d-lg-flex align-items-center justify-content-center">

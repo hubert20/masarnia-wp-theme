@@ -608,13 +608,16 @@ a {
         font-size: 14px;
     }
     &__close-cookie-info {
-        background: #e21927;
+        background: $brown-brand;
         color: #fff;
         border: 0;
         padding: 6px 9px;
         border-radius: 3px;
         margin: 0 0 0 20px;
         text-decoration: none !important;
+        &:hover {
+            color: #fff!important;
+        }
     }
 }
 

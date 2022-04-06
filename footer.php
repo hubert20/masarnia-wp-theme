@@ -18,13 +18,7 @@
 <div id="cookie-warn" class="cookie-warn">
     <div class="cookie-warn__box">
         <span class="cookie-warn__left-side">
-            Na stronie korzystamy z plików cookies, by dostosowywać jej zawartość do preferencji użytkownika oraz ją
-            optymalizować. Używane są one również w celu tworzenia anonimowych statystyk pomagających zrozumieć, w jaki
-            sposób
-            użytkownik korzysta ze strony, z wyłączeniem jego personalnej identyfikacji.
-            <a class="cookie-warn__more-info-link text-red" target="_blank" href="#">Szczegóły
-                w polityce prywatności <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </a>
+            Użytkowanie oznacza akceptację regulaminu oraz Polityki prywatności, w tym zapisywania plików cookie.
         </span>
         <span class="cookie-warn__right-side">
             <a href="javascript:void(0);" id="close-cookie-warn" class="cookie-warn__close-cookie-info">OK</a>
