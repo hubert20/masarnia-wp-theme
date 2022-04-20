@@ -37,7 +37,7 @@ if (in_category('wedzonki')) {
     $body_background = get_field('tlo', 47);
     $top_header_image = get_field('top_header_image', 47);
     $top_header_icon = get_field('top_header_icon', 47);
-} else if (in_category('garmazerka')) {
+} else if (in_category('wyroby-podrobowe')) {
     $body_background = get_field('tlo', 47);
     $top_header_image = get_field('top_header_image', 47);
     $top_header_icon = get_field('top_header_icon', 47);
